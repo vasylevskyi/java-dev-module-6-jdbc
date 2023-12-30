@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-    private static final Database database = new Database();
+    private static final Database INSTANCE = new Database();
     private static final String DB_URL = "jdbc:h2:./MegaSoft";
     private Connection connection;
 
@@ -18,7 +18,7 @@ public class Database {
 
     }
     public static Database getInstance() {
-        return database;
+        return INSTANCE;
     }
 
     public Connection getConnection() {
