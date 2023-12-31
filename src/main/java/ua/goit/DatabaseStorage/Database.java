@@ -1,4 +1,4 @@
-package ua.goit;
+package ua.goit.DatabaseStorage;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

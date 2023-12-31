@@ -1,13 +1,13 @@
-package ua.goit;
+package ua.goit.DatabaseStorage;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DatabasePopulateService {
-    private static final String POPULATE_DB_FILE_NAME = "sql\\populate_db.sql";
+public class DatabaseInitService {
+    private static final String INIT_DB_FILE_NAME = "sql\\init_db.sql";
     public static void main(String[] args) throws SQLException {
-        new DatabasePopulateService().executeUpdate(ReadSQL.readFile(POPULATE_DB_FILE_NAME));
+        new DatabaseInitService().executeUpdate(ReadSQL.readFile(INIT_DB_FILE_NAME));
     }
 
     public void executeUpdate(String sql) throws SQLException {
@@ -20,5 +20,5 @@ public class DatabasePopulateService {
         }
         database.close();
     }
-}
 
+}

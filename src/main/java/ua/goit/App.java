@@ -1,21 +1,28 @@
 package ua.goit;
 
-import java.sql.Connection;
+import ua.goit.DatabaseStorage.DatabaseQueryService;
+import ua.goit.dto.*;
+
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) throws SQLException {
 
-        Connection connection = Database.getInstance().getConnection();
+/*        List<LongestProjectDurationDTO> longestProjectDurations = DatabaseQueryService.findLongestProject();
+        System.out.println("longestProjectDurations = " + longestProjectDurations);*/
 
-        Statement statement = connection.createStatement();
+/*        List<MaxProjectCountClientDTO> maxProjectCountClients = DatabaseQueryService.findMaxProjectsClient();
+        System.out.println("maxProjectCountClients = " + maxProjectCountClients);*/
 
-        statement.executeUpdate("CREATE TABLE test_table (name VARCHAR(100))");
+/*        List<MaxSalaryAmountWorkerDTO> maxSalaryAmountWorkers = DatabaseQueryService.findMaxSalaryAmountWorker();
+        System.out.println("maxSalaryAmountWorkers = " + maxSalaryAmountWorkers);*/
 
-        statement.close();
+/*        List<YoungestEldestWorkersDTO> youngestEldestWorkers = DatabaseQueryService.findYoungestEldestWorkers();
+        System.out.println("youngestEldestWorkers = " + youngestEldestWorkers);*/
 
-        connection.close();
+        List<PrintProjectPricesDTO> pintProjectPrices = DatabaseQueryService.printProjectPrices();
+        System.out.println("pintProjectPrices = " + pintProjectPrices);
 
     }
 }

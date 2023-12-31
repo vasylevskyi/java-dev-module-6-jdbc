@@ -1,4 +1,4 @@
-package ua.goit;
+package ua.goit.DatabaseStorage;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
